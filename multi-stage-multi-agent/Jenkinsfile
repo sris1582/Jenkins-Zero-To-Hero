@@ -30,8 +30,8 @@ pipeline {
         docker { image 'ubuntu' }
       }
       steps {
-        sh 'chmod +x /multi-stage-multi-agent/Helloworld.sh'
-        sh '/multi-stage-multi-agent/Helloworld.sh'
+        sh 'chmod +x ./multi-stage-multi-agent/Helloworld.sh'
+        sh './multi-stage-multi-agent/Helloworld.sh'
       }
     }
   }
