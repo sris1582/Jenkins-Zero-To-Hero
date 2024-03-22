@@ -17,9 +17,9 @@ pipeline {
         sh 'node --version'
       }
     }
-    stage('Message') {
+    stage('DB') {
       agent {
-        docker { image 'node:18-alpine' }
+        docker { image 'mysql' }
       }
       steps {
         sh 'uname -a'
