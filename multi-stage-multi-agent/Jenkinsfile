@@ -30,7 +30,8 @@ pipeline {
         docker { image 'ubuntu' }
       }
       steps {
-        sh '/var/lib/jenkins/Jenkins-Zero-To-Hero/multi-stage-multi-agent/Helloworld.sh'
+        sh 'chmod +x /multi-stage-multi-agent/Helloworld.sh'
+        sh '/multi-stage-multi-agent/Helloworld.sh'
       }
     }
   }
