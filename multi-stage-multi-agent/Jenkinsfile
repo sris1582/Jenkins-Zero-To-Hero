@@ -30,7 +30,7 @@ pipeline {
         docker { image 'ubuntu' }
       }
       steps {
-        sh ' ./multi-stage-multi-agent/Helloworld.sh'
+        sh '/var/lib/jenkins/Jenkins-Zero-To-Hero/multi-stage-multi-agent/Helloworld.sh'
       }
     }
   }
