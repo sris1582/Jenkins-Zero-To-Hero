@@ -25,5 +25,13 @@ pipeline {
         sh 'uname -a'
       }
     }
+    stage('Scripttest') {
+      agent {
+        docker { image 'ubuntu' }
+      }
+      steps {
+        sh 'Helloworld'
+      }
+    }
   }
 }
