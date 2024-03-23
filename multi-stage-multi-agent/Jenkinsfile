@@ -17,29 +17,5 @@ pipeline {
         sh 'node --version'
       }
     }
-    stage('DB') {
-      agent {
-        docker { image 'mysql' }
-      }
-      steps {
-        sh 'uname -a'
-      }
-    }
-    stage('Compile') {
-      agent {
-        docker { image 'maven:3.8.1-adoptopenjdk-11' }
-      }
-      steps {
-        sh 'javac HelloWorld.java'
-        }
-      }
-    stage('Run') {
-      agent {
-        docker { image 'maven:3.8.1-adoptopenjdk-11' }
-      }
-      steps {        
-        sh 'java HelloWorld'
-      }
-    }
   }
 }
